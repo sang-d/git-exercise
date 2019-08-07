@@ -1,7 +1,10 @@
-!#/bin/bash
+#!/bin/bash
 
 echo "CIRCLE_PULL_REQUEST: " $CIRCLE_PULL_REQUEST
 
 echo "CIRCLE_PULL_REQUESTS: "  $CIRCLE_PULL_REQUESTS
 
 echo "CIRCLE_PR_NUMBER: " $CIRCLE_PR_NUMBER
+
+exit 1
+
