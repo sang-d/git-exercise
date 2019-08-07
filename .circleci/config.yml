@@ -10,6 +10,9 @@ jobs:
       - run:
           name: Test step
           command: printenv
+      - run:
+          name: Print env
+          command: ./print_env.sh
 #       - run:
 #           name: Deploy to S3
 #           command: aws s3 sync sang s3://test-circleci29/$CIRCLE_BRANCH/$CIRCLE_SHA1/docs/ --delete
