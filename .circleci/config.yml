@@ -45,4 +45,9 @@ workflows:
           branches:
             only:
             - feature/git102/*
+    - build_git_101:
+        filters:
+          branches:
+            only:
+            - develop
 
