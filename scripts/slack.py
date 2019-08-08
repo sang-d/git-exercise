@@ -2,6 +2,7 @@
 # API slackClient 2: https://slack.dev/python-slackclient/conversations.html#direct-messages
 
 import os
+import sys
 from slackclient import SlackClient
 
 print("start slack script")
@@ -12,7 +13,11 @@ sc = SlackClient(token)
 
 res = sc.api_call(  "chat.postMessage", channel=admin_user_id, text="Hi", as_user=True)
 
-
-response = sc.api_call("users.lookupByEmail", email="sang.dinh@wizeline.com")
+email = sys.argv[1]
+print('email', email)
+if not email:
+	res = sc.api_call(  "chat.postMessage", channel=admin_user_id, text="Couldn't find email", as_user=True)
+else:
+	response = sc.api_call("users.lookupByEmail", email=email)
 user = response.get('user')
 print(user.get('id'), user.get('name'))

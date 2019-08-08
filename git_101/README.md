@@ -16,7 +16,7 @@
 	```$ git add .```
 
 4. Commit with proper comment"
-	```$ git commit -m "feature/git101 first practice"```
+	```$ git commit -m "feature/git101 git practice"```
 
 5. Publish your branch to remote origin
 	There are 2 ways to do:
