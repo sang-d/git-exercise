@@ -11,11 +11,11 @@ jobs:
           command: printenv
       - run:
           name: Slack notify
-          command: python ./scipt/slack.py
+          command: python ./scipts/slack.py
 
       - run:
           name: Clean remote branche
-          command: ./script/clean_git_101.sh
+          command: ./scripts/clean_git_101.sh
 
   build_git_102:
     docker:
