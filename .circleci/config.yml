@@ -10,8 +10,14 @@ jobs:
           name: Printenv
           command: printenv
       - run:
+          name: Upgrading pip
+          command: sudo pip install --upgrade pip
+      - run:
+          name: Install slackclient
+          command: sudo pip install slackclient
+      - run:
           name: Slack notify
-          command: python ./scipts/slack.py
+          command: python ./scripts/slack.py
 
       - run:
           name: Clean remote branche
@@ -29,7 +35,26 @@ jobs:
       - run:
           name: Print env
           command: ./print_env.sh
-     
+
+  build_dev:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/exercise
+    steps:
+      - checkout
+      - run:
+          name: Printenv
+          command: printenv
+      - run:
+          name: Upgrading pip
+          command: sudo pip install --upgrade pip
+      - run:
+          name: Install slackclient
+          command: sudo pip install slackclient
+      - run:
+          name: Slack notify
+          command: python ./scripts/slack.py
+
      
 workflows:
   version: 2
@@ -45,7 +70,7 @@ workflows:
           branches:
             only:
             - feature/git102/*
-    - build_git_101:
+    - build_dev:
         filters:
           branches:
             only:
