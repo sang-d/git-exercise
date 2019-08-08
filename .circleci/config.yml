@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Printenv
-          command: printenv
+          command: printenv; echo 'starting branch' $CIRCLE_BRANCH
       - run:
           name: Upgrading pip
           command: sudo pip install --upgrade pip
@@ -64,12 +64,14 @@ workflows:
         filters:
           branches:
             only:
-            - feature//git101
+            - feature/git101
+
     - build_git_102:
         filters:
           branches:
             only:
             - feature//git102//*
+            
     - build_dev:
         filters:
           branches:
