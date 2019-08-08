@@ -1,7 +1,23 @@
 version: 2
 jobs:
-  # build job omitted for brevity
-  build:
+  build_git_101:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/exercise
+    steps:
+      - checkout
+      - run:
+          name: Printenv
+          command: printenv
+      - run:
+          name: Slack notify
+          command: python ./scipt/slack.py
+
+      - run:
+          name: Clean remote branche
+          command: ./script/clean_git_101.sh
+
+  build_git_102:
     docker:
       - image: circleci/python:2.7-jessie
     working_directory: ~/exercise
@@ -13,20 +29,20 @@ jobs:
       - run:
           name: Print env
           command: ./print_env.sh
-#       - run:
-#           name: Deploy to S3
-#           command: aws s3 sync sang s3://test-circleci29/$CIRCLE_BRANCH/$CIRCLE_SHA1/docs/ --delete
      
      
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-    - build:
+    - build_git_101:
         filters:
           branches:
             only:
-            - master
-            - develop
-            - /feature.*/
+            - feature/git101
+    - build_git_102:
+        filters:
+          branches:
+            only:
+            - feature/git102/*
 

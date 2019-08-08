@@ -5,33 +5,34 @@
 
 1. Create a new feature branch with format: feature/git101
 	There are 2 ways to do:
-	```$ git flow feature start {your-wizeline-user-name}```
-	```$ git checkout -b feature/{your-wizeline-user-name}```
+	```$ git flow feature start git101```
+	Or
+	```$ git checkout -b feature/git101```
 
 2. Adding a new file:
-	```$ touch git_101/hello.txt```
+	```$ touch changes/hello.txt```
 
 3. Add changes to git staging:
 	```$ git add .```
 
 4. Commit with proper comment"
-	```$ git commit -m "feature/{your-wizeline-user-name} git 101 practice"```
+	```$ git commit -m "feature/git101 first practice"```
 
 5. Publish your branch to remote origin
 	There are 2 ways to do:
-	```$ git flow feature publish {your-wizeline-user-name}```
-	```$ git push --set-upstream origin feature/{your-wizeline-user-name}```
+	```$ git flow feature publish git101```
+	Or
+	```$ git push --set-upstream origin feature/git101```
 
-After complete this, a slack bot `git-x` will notify you if it has been done correctly.
+After complete this, a slack bot `git-x` will notify you on Slack if it has been done correctly.
 
 6. Clean your branch (delete local and remote branch)
 	There are 2 ways to do:
-	```$ git flow feature finish {your-wizeline-user-name}```
+	```$ git flow feature finish git101```
 	```$ git reset origin/develop --hard```
 
 	Or
-	```$ git push origin --delete feature/{your-wizeline-user-name}```
+	```$ git push origin --delete feature/git101```
 	```$ git checkout develop```
-	```$ git branch -D feature/{your-wizeline-user-name}```
+	```$ git branch -D feature/git101```
 	
-#### Note: you need to complete #6 to practice git_102

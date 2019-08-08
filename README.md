@@ -7,7 +7,7 @@
 - Install [git-flow-avh](https://danielkummer.github.io/git-flow-cheatsheet/)
   - ```$ brew install git-flow-avh```
 
-- Set up git user.email with your wizeline email (lower case)
+- Config git user.email with your wizeline email (lower case)
   - ```$ git config --global user.email your-email@wizeline.com```
 
 - You need to be added to this repository's collaborator & team to push changes
