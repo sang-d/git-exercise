@@ -31,10 +31,8 @@ jobs:
       - checkout
       - run:
           name: Test step
-          command: printenv
-      - run:
-          name: Print env
-          command: ./print_env.sh
+          command: printenv && echo '102 branch'
+
 
   build_dev:
     docker:
@@ -70,8 +68,7 @@ workflows:
         filters:
           branches:
             only:
-            - feature//git102//*
-            
+            - /feature/git102/.*/
     - build_dev:
         filters:
           branches:
