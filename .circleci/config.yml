@@ -67,7 +67,7 @@ workflows:
         filters:
           branches:
             only:
-            - feature/git102/sang
+            - feature/git102/*
     - build_dev:
         filters:
           branches:
