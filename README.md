@@ -8,14 +8,14 @@
   - ```$ brew install git-flow-avh```
 
 - Set up git user.email with your wizeline email (lower case)
-  - ```$ git config --global user.email **your-wizeline-email** ```
+  - ```$ git config --global user.email your-email@wizeline.com```
 
-- Also you need to be added to this github repository's collaborator & team
+- Also you need to be added to this repository's collaborator & team to push changes
 
 
 ### Exercises:
--  clone this repository
-  ```$ git clone ```
+-  clone  repository
+  - ```$ git clone ```
 
 - Follow instruction in each git_* folder
 
