@@ -64,12 +64,12 @@ workflows:
         filters:
           branches:
             only:
-            - feature/git101
+            - feature//git101
     - build_git_102:
         filters:
           branches:
             only:
-            - feature/git102/*
+            - feature//git102//*
     - build_dev:
         filters:
           branches:
