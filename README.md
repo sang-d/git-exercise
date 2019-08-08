@@ -10,12 +10,16 @@
 - Set up git user.email with your wizeline email (lower case)
   - ```$ git config --global user.email your-email@wizeline.com```
 
-- Also you need to be added to this repository's collaborator & team to push changes
+- You need to be added to this repository's collaborator & team to push changes
 
 
 ### Exercises:
--  clone  repository
+-  clone repository
   - ```$ git clone ```
+
+-  init default git flow
+  - ```$ git flow init -d```
+
 
 - Follow instruction in each git_* folder
 
